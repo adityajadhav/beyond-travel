@@ -8,7 +8,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.travelpro.travelpro.entities.TokenEntity;
+import com.travelpro.entities.TokenEntity;
+
 
 /**
  * Created by neo on 25-02-2017.

@@ -11,7 +11,7 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.travelpro.travelpro.MainActivity;
+import com.travelpro.MainActivity;
 
 /**
  * Created by neo on 25-02-2017.
