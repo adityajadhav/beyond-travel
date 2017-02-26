@@ -1,0 +1,379 @@
+{"data" : 
+	[
+	{
+		"record_locator" : "YNRHWR",
+			"header" : {
+				"creation_office_id" : "LHR1S38AB",
+				"owner_office_id" : "LHR1S38AB"
+			},
+			"messages" : [ ],
+			"travelers" : [ {
+				"id" : "PT1",
+				"last_name" : "Dani",
+				"first_name" : "Chris",
+				"type" : "ADULT",
+				"contacts" : [ {
+					"type" : "PHONE",
+					"purpose" : "BUSINESS",
+					"detail" : "123-456-7890"
+				} ],
+				"frequent_traveler_cards" : [ ]
+			} ],
+			"reservation" : {
+				"flight_tickets" : [ {
+					"id" : "TST1",
+					"price" : {
+						"amount" : "3514.30",
+						"currency" : "USD"
+					},
+					"traveler_ids" : [ "PT1" ],
+					"flight_bounds" : [ {
+						"flights" : [ {
+							"id" : "ST1",
+							"departs_at" : "2015-10-05T20:45",
+							"arrives_at" : "2015-10-06T09:25",
+							"origin" : {
+								"airport" : "BOS",
+								"terminal" : "E"
+							},
+							"destination" : {
+								"airport" : "ORD",
+								"terminal" : "2E"
+							},
+							"marketing_airline" : "AF",
+							"flight_number" : "333",
+							"booking_info" : {
+								"booking_code" : "Y",
+								"travel_class" : "ECONOMY",
+								"airline_record_locator" : "YNRHWR",
+								"status" : "CONFIRMED"
+							},
+							"traveler_ids" : [ "PT1" ],
+							"operating_airline" : "AF"
+						}, {
+							"id" : "ST2",
+								"departs_at" : "2015-10-06T10:50",
+								"arrives_at" : "2015-10-06T16:20",
+								"origin" : {
+									"airport" : "SJC",
+									"terminal" : "2E"
+								},
+								"destination" : {
+									"airport" : "ORD",
+									"terminal" : "3"
+								},
+								"marketing_airline" : "AF",
+								"flight_number" : "1620",
+								"booking_info" : {
+									"booking_code" : "Y",
+									"travel_class" : "ECONOMY",
+									"airline_record_locator" : "YNRHWR",
+									"status" : "CONFIRMED"
+								},
+								"traveler_ids" : [ "PT1" ],
+								"operating_airline" : "AF"
+						} ]
+					} ]
+				} ],
+				"unticketed_flights" : [ ],
+				"trains" : [ ],
+				"cars" : [ {
+					"id" : "ST4",
+					"pick_up" : "2015-10-06T16",
+					"drop_off" : "2015-10-07T16",
+					"origin" : "ORD",
+					"provider" : {
+						"company_code" : "SX",
+						"company_name" : "SIXT"
+					},
+					"car" : {
+						"vehicle_info" : {
+							"acriss_code" : "MCMR",
+							"transmission" : "Manual",
+							"fuel" : "Unspecified",
+							"air_conditioning" : true,
+							"category" : "Mini",
+							"type" : "2/4 Door"
+						},
+						"estimated_total" : {
+							"amount" : "33.74",
+							"currency" : "USD"
+						}
+					},
+					"booking_info" : {
+						"reservation_code" : "9815366672",
+						"status" : "CONFIRMED"
+					},
+					"traveler_ids" : [ "PT1" ]
+				} ],
+				"hotels" : [ {
+					"check_in" : "2015-10-06",
+					"check_out" : "2015-10-07",
+					"property_code" : "BWORD023",
+					"property_name" : "BEST WESTERN REGENCY SUITES",
+					"total_price" : {
+						"amount" : "240.00",
+						"currency" : "USD"
+					},
+					"booking_info" : {
+						"reservation_code" : "161799940",
+						"status" : "CONFIRMED"
+					},
+					"traveler_ids" : [ "PT1" ],
+					"id" : "ST3"
+				} ],
+				"others" : [ ]
+			}
+	},
+	{
+		"record_locator" : "YNRHAB",
+		"header" : {
+			"creation_office_id" : "LHR1S38AB",
+			"owner_office_id" : "LHR1S38AB"
+		},
+		"messages" : [ ],
+		"travelers" : [ {
+			"id" : "PT2",
+			"last_name" : "Kataria",
+			"first_name" : "Nikhita",
+			"type" : "ADULT",
+			"contacts" : [ {
+				"type" : "PHONE",
+				"purpose" : "BUSINESS",
+				"detail" : "312-868-3580"
+			} ],
+			"frequent_traveler_cards" : [ ]
+		} ],
+		"reservation" : {
+			"flight_tickets" : [ {
+				"id" : "TST2",
+				"price" : {
+					"amount" : "311.30",
+					"currency" : "USD"
+				},
+				"traveler_ids" : [ "PT2" ],
+				"flight_bounds" : [ {
+					"flights" : [ {
+						"id" : "ST2",
+						"departs_at" : "2015-10-05T20:45",
+						"arrives_at" : "2015-10-06T09:25",
+						"origin" : {
+							"airport" : "SJC",
+							"terminal" : "E"
+						},
+						"destination" : {
+							"airport" : "BOS",
+							"terminal" : "2E"
+						},
+						"marketing_airline" : "AF",
+						"flight_number" : "373",
+						"booking_info" : {
+							"booking_code" : "Y",
+							"travel_class" : "ECONOMY",
+							"airline_record_locator" : "YNRHAB",
+							"status" : "CONFIRMED"
+						},
+						"traveler_ids" : [ "PT2" ],
+						"operating_airline" : "AF"
+					}, {
+						"id" : "ST2",
+							"departs_at" : "2015-10-06T10:50",
+							"arrives_at" : "2015-10-06T16:20",
+							"origin" : {
+								"airport" : "SJC",
+								"terminal" : "2E"
+							},
+							"destination" : {
+								"airport" : "ORD",
+								"terminal" : "3"
+							},
+							"marketing_airline" : "AF",
+							"flight_number" : "1620",
+							"booking_info" : {
+								"booking_code" : "Y",
+								"travel_class" : "ECONOMY",
+								"airline_record_locator" : "YNRHWR",
+								"status" : "CONFIRMED"
+							},
+							"traveler_ids" : [ "PT2" ],
+							"operating_airline" : "AF"
+					} ]
+				} ]
+			} ],
+			"unticketed_flights" : [ ],
+			"trains" : [ ],
+			"cars" : [ {
+				"id" : "ST5",
+				"pick_up" : "2015-10-06T16",
+				"drop_off" : "2015-10-07T16",
+				"origin" : "ORD",
+				"provider" : {
+					"company_code" : "SX",
+					"company_name" : "SIXT"
+				},
+				"car" : {
+					"vehicle_info" : {
+						"acriss_code" : "MCMR",
+						"transmission" : "Manual",
+						"fuel" : "Unspecified",
+						"air_conditioning" : true,
+						"category" : "Mini",
+						"type" : "2/4 Door"
+					},
+					"estimated_total" : {
+						"amount" : "33.74",
+						"currency" : "USD"
+					}
+				},
+				"booking_info" : {
+					"reservation_code" : "9815366683",
+					"status" : "CONFIRMED"
+				},
+				"traveler_ids" : [ "PT2" ]
+			} ],
+			"hotels" : [ {
+				"check_in" : "2015-10-06",
+				"check_out" : "2015-10-07",
+				"property_code" : "BWORD023",
+				"property_name" : "BEST WESTERN REGENCY SUITES",
+				"total_price" : {
+					"amount" : "240.00",
+					"currency" : "USD"
+				},
+				"booking_info" : {
+					"reservation_code" : "161799940",
+					"status" : "CONFIRMED"
+				},
+				"traveler_ids" : [ "PT2" ],
+				"id" : "ST3"
+			} ],
+			"others" : [ ]
+		}
+	},
+	{
+		"record_locator" : "YNRHCD",
+		"header" : {
+			"creation_office_id" : "LHR1S38AB",
+			"owner_office_id" : "LHR1S38AB"
+		},
+		"messages" : [ ],
+		"travelers" : [ {
+			"id" : "PT3",
+			"last_name" : "Jadhav",
+			"first_name" : "Aditya",
+			"type" : "ADULT",
+			"contacts" : [ {
+				"type" : "PHONE",
+				"purpose" : "BUSINESS",
+				"detail" : "312-868-1123"
+			} ],
+			"frequent_traveler_cards" : [ ]
+		} ],
+		"reservation" : {
+			"flight_tickets" : [ {
+				"id" : "TST3",
+				"price" : {
+					"amount" : "3514.30",
+					"currency" : "USD"
+				},
+				"traveler_ids" : [ "PT7" ],
+				"flight_bounds" : [ {
+					"flights" : [ {
+						"id" : "ST1",
+						"departs_at" : "2015-10-05T20:45",
+						"arrives_at" : "2015-10-06T09:25",
+						"origin" : {
+							"airport" : "BOS",
+							"terminal" : "E"
+						},
+						"destination" : {
+							"airport" : "SJC",
+							"terminal" : "2E"
+						},
+						"marketing_airline" : "AF",
+						"flight_number" : "333",
+						"booking_info" : {
+							"booking_code" : "Y",
+							"travel_class" : "ECONOMY",
+							"airline_record_locator" : "YNRHWR",
+							"status" : "CONFIRMED"
+						},
+						"traveler_ids" : [ "PT1" ],
+						"operating_airline" : "AF"
+					}, {
+						"id" : "ST3",
+							"departs_at" : "2015-10-06T10:50",
+							"arrives_at" : "2015-10-06T16:20",
+							"origin" : {
+								"airport" : "SJC",
+								"terminal" : "2E"
+							},
+							"destination" : {
+								"airport" : "ORD",
+								"terminal" : "3"
+							},
+							"marketing_airline" : "AF",
+							"flight_number" : "1620",
+							"booking_info" : {
+								"booking_code" : "Y",
+								"travel_class" : "ECONOMY",
+								"airline_record_locator" : "YNRHWR",
+								"status" : "CONFIRMED"
+							},
+							"traveler_ids" : [ "PT1" ],
+							"operating_airline" : "AF"
+					} ]
+				} ]
+			} ],
+			"unticketed_flights" : [ ],
+			"trains" : [ ],
+			"cars" : [ {
+				"id" : "ST4",
+				"pick_up" : "2015-10-06T16",
+				"drop_off" : "2015-10-07T16",
+				"origin" : "ORD",
+				"provider" : {
+					"company_code" : "SX",
+					"company_name" : "SIXT"
+				},
+				"car" : {
+					"vehicle_info" : {
+						"acriss_code" : "MCMR",
+						"transmission" : "Manual",
+						"fuel" : "Unspecified",
+						"air_conditioning" : true,
+						"category" : "Mini",
+						"type" : "2/4 Door"
+					},
+					"estimated_total" : {
+						"amount" : "33.74",
+						"currency" : "USD"
+					}
+				},
+				"booking_info" : {
+					"reservation_code" : "9815366672",
+					"status" : "CONFIRMED"
+				},
+				"traveler_ids" : [ "PT1" ]
+			} ],
+			"hotels" : [ {
+				"check_in" : "2015-10-06",
+				"check_out" : "2015-10-07",
+				"property_code" : "BWORD023",
+				"property_name" : "BEST WESTERN REGENCY SUITES",
+				"total_price" : {
+					"amount" : "240.00",
+					"currency" : "USD"
+				},
+				"booking_info" : {
+					"reservation_code" : "161799940",
+					"status" : "CONFIRMED"
+				},
+				"traveler_ids" : [ "PT1" ],
+				"id" : "ST3"
+			} ],
+			"others" : [ ]
+		}
+	}
+	]
+}
