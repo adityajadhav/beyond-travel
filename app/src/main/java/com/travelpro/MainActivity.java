@@ -1,11 +1,8 @@
 package com.travelpro;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.travelpro.entities.UserEntity;
+import com.travelpro.services.HomeActivity;
 
 public class MainActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener,
@@ -141,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
             final UserEntity user = new UserEntity();
+            user.setId(acct.getId());
             user.setUsername(acct.getId());
             user.setEmail(acct.getEmail());
             user.setUsername(acct.getDisplayName());
@@ -150,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements
             user.setToken(token);
 
 
-            mDatabase.child("users").child(user.getId()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+           mDatabase.child("users").child(user.getId()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
 
@@ -235,12 +234,6 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
 
     private void showProgressDialog() {
         if (mProgressDialog == null) {
