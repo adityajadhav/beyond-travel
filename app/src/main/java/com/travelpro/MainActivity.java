@@ -20,8 +20,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
@@ -47,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -149,9 +146,9 @@ public class MainActivity extends AppCompatActivity implements
             user.setToken(token);
 
 
-           mDatabase.child("users").child(user.getId()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+         /*  mDatabase.child("users").child(user.getId()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
-                public void onComplete(@NonNull Task<Void> task) {
+                public void onComplete(@NonNull Task<Void> task) {*/
 
                     SharedPreferences pref = getApplicationContext().getSharedPreferences("CurrentUser", MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
@@ -165,8 +162,8 @@ public class MainActivity extends AppCompatActivity implements
                     intent.putExtra("USER_DETAILS", user);
                     startActivity(intent);
                     finish();
-                }
-            });
+          /*      }
+            });*/
 
         } else {
             // Signed out, show unauthenticated UI.
