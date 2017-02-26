@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements
             user.setEmail(acct.getEmail());
             user.setUsername(acct.getDisplayName());
 
-            SharedPreferences prefs = getSharedPreferences("TAHelper", MODE_PRIVATE);
+            SharedPreferences prefs = getSharedPreferences("TravelPro", MODE_PRIVATE);
             String token = prefs.getString("refreshedToken", "");
             user.setToken(token);
 

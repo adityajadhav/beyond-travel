@@ -29,7 +29,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");//Displaying token on logcat
 
-        SharedPreferences.Editor editor = getSharedPreferences("TAHelper", MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = getSharedPreferences("TravelPro", MODE_PRIVATE).edit();
         editor.clear();
         editor.putString("refreshedToken", refreshedToken);
         editor.commit();
@@ -41,7 +41,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         TokenEntity tokenEntity = new TokenEntity();
         tokenEntity.setId(token);
-        mDatabase.child("token").child(token).setValue(tokenEntity);
+        mDatabase.child("tokens").child(token).setValue(tokenEntity);
 
     }
 }
