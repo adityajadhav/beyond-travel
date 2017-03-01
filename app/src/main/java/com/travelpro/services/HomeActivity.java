@@ -2,6 +2,7 @@ package com.travelpro.services;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,9 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -53,6 +57,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView title = (TextView) findViewById(R.id.title);
+
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -73,7 +79,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (currHr >= 5 && currHr <= 12) {
             mealLayout.setBackground(getResources().getDrawable(R.drawable.morning));
         } else if (currHr > 12 && currHr <= 16) {
-            mealLayout.setBackground(getResources().getDrawable(R.drawable.dawn));
+            mealLayout.setBackground(getResources().getDrawable(R.drawable.morning));
             //layout.setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
         } else if (currHr > 16 && currHr <= 18) {
         } else {
@@ -102,6 +108,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         UserEntity currnetUser = gson.fromJson(prefs.getString("UserEntityJson", ""), UserEntity.class);
         mDatabase = mDatabase.child("users").child(currnetUser.getId());
         suggestions = new ArrayList<>();
+        title.setText("Hello, " + currnetUser.getUsername());
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String selectedId = suggestions.get(i);
+
+
+                Uri gmmIntentUri = Uri.parse("geo:41.9799916,-87.6680196");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
 
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
