@@ -1,4 +1,5 @@
 # Get destination given a user name 
+#no keys
 import json
 import requests 
 import sys
