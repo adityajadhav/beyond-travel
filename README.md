@@ -1,4 +1,4 @@
-# beyond-travel
+# Beyond Travel [Winner, HackIllinois 2017, University of Illinois Urbana Champaign]
 
 [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
